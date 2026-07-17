@@ -11,6 +11,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/",(req,res) =>{
+    res.send("JWT Authentication API is running successfully ");
+});    
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 
